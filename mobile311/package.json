@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^8.8.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
