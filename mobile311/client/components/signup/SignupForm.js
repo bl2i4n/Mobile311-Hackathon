@@ -23,7 +23,10 @@ class SignupForm extends React.Component{
   onSubmit(event){
     event.preventDefault();
     // axios.post('/api/users', {user: this.state});
-    this.props.userSignupRequest(this.state);
+    this.props.userSignupRequest(this.state).then(
+      () => {},
+      ({data}) => this.setState({errors: data})
+    );
   }
 
   render (){
