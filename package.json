@@ -17,9 +17,13 @@
     "tachyons": "^4.7.4"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "react-scripts": "1.0.7"
   },
+  "homepage": "https://hackbit.github.io/reactriot2017-mobile311/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

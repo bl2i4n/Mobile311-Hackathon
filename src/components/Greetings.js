@@ -13,6 +13,12 @@ class Greetings extends React.Component{
             </div>
           <h2 className="h2-main">Improving City Services</h2>
 
+          <div id="hackbit-vote-widget" className="">
+            <a href="https://www.reactriot.com/entries/304-supreme-dream-team/vote" target="_blank">
+              Vote for Mobile 311
+            </a>
+          </div>
+
         </div>
     );
   }
