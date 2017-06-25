@@ -3,7 +3,6 @@ import { gql, graphql } from 'react-apollo'
 import Modal from 'react-modal'
 import modalStyle from '../constants/modalStyle'
 import {withRouter} from 'react-router-dom'
-import AutoScale from 'react-auto-scale';
 
 const detailModalStyle = {
   overlay: modalStyle.overlay,
@@ -51,17 +50,17 @@ class DetailPage extends React.Component {
         <div
           className='bg-white detail flex flex-column no-underline br2 h-100'
         >
-        <AutoScale>
-          <div
-            className='image'
-            style={{
-              backgroundImage: `url(${Post.imageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              paddingBottom: '100%',
-            }}
-          />
-          </AutoScale>
+
+        <img
+          src={Post.imageUrl}
+          role='presentation'
+          className='w-100 mv3'
+          style={{
+            paddingTop: '15%',
+            paddingBottom: '50%',
+          }}
+        />
+
           <div className='flex items-center black-80 fw3 info'>
             {Post.title}
           </div>
