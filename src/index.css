@@ -57,9 +57,9 @@ html {
   height: 33px;
 }
 
-.blur {
+/*.blur {
   filter: blur(7px);
-}
+}*/
 
 .close {
   opacity: 0.5;
