@@ -54,10 +54,10 @@ class DetailPage extends React.Component {
         <img
           src={Post.file.url}
           role='presentation'
-          className='w-100 mv3'
+          className='w-50 mv3'
           style={{
             paddingTop: '15%',
-            paddingBottom: '5%',
+            paddingBottom: '2em',
           }}
         />
 
