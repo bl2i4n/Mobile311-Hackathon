@@ -52,7 +52,7 @@ class DetailPage extends React.Component {
         >
 
         <img
-          src={Post.imageUrl}
+          src={Post.file.url}
           role='presentation'
           className='w-100 mv3'
           style={{
@@ -97,10 +97,12 @@ const PostQuery = gql`
   query post($id: ID!) {
     Post(id: $id) {
       id
-      imageUrl
       description
       title
       location
+      file {
+        url
+      }
     }
   }
 `

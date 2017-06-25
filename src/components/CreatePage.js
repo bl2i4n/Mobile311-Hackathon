@@ -12,9 +12,9 @@ class CreatePage extends React.Component {
   this.state = {
     description: '',
     location: '',
-    imageUrl: '',
     file: '',
     title: '',
+    imageUrl: ''
   };
   this._handleImageChange = this._handleImageChange.bind(this);
   this._handleSubmit = this._handleSubmit.bind(this);
@@ -37,7 +37,6 @@ _handleSubmit(e) {
         imageUrl: reader.result
       });
     }
-
     reader.readAsDataURL(file)
   }
 
@@ -94,7 +93,7 @@ _handleSubmit(e) {
               this.state.location && this.state.description && this.state.imageUrl &&
               <button
                 className='pa3 bg-black-10 bn dim ttu pointer'
-                onClick={this.handlePost}
+                onClick={this.uploadFile}
               >
                 Post
               </button>}
@@ -105,22 +104,33 @@ _handleSubmit(e) {
     )
   }
 
-  handlePost = async () => {
-    const {description, imageUrl, title, location} = this.state
-    await this.props.addPost({variables: {description, imageUrl, title, location}})
+  handlePost = async (fileId) => {
+    const {description, title, location} = this.state
+    const postPostId = await this.props.addPost({variables: {description, title, location, fileId}})
 
     window.location.pathname = '/main'
+  }
+
+  uploadFile = () => {
+    let data = new FormData();
+    data.append('data', this.state.file);
+
+    // use the file endpoint
+    fetch('https://api.graph.cool/file/v1/cj4bcxjmcbtbm0142hkdals4x', {
+      method: 'POST',
+      body: data
+    }).then(response => {
+      return response.json()
+    }).then(file => {
+      this.handlePost(file.id)
+    });
   }
 }
 
 const addMutation = gql`
-  mutation addPost($imageUrl: String!, $description: String!, $title: String!, $location: String!) {
-    createPost(imageUrl: $imageUrl, description: $description, title: $title, location: $location) {
+  mutation addPost($description: String!, $title: String!, $location: String!, $fileId: ID!) {
+    createPost(description: $description, title: $title, location: $location, fileId: $fileId) {
       id
-      imageUrl
-      description
-      title
-      location
     }
   }
 `
