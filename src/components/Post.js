@@ -30,7 +30,7 @@ class Post extends React.Component {
   // not currently used.
   handleDelete = async () => {
     await this.props.mutate({variables: {id: this.props.post.id}})
-    this.props.history.replace('/')
+    this.props.history.replace('/main')
   }
 }
 
