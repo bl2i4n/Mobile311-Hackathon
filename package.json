@@ -20,7 +20,6 @@
     "gh-pages": "^1.0.0",
     "react-scripts": "1.0.7"
   },
-  "homepage": "https://hackbit.github.io/reactriot2017-mobile311/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
