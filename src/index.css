@@ -85,3 +85,7 @@ html {
   margin-top: 18px;
   margin-left: 18px;
 }
+
+.centered {
+  text-align: center;
+}
