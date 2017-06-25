@@ -105,7 +105,7 @@ _handleSubmit(e) {
     const {description, imageUrl, title, location} = this.state
     await this.props.addPost({variables: {description, imageUrl, title, location}})
 
-    window.location.pathname = '/'
+    window.location.pathname = '/main'
   }
 }
 

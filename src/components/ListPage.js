@@ -32,6 +32,13 @@ class ListPage extends React.Component {
     return (
       <div className={'w-100 flex justify-center pa6' + blurClass}>
         <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
+          {this.props.data.allPosts.map(post => (
+            <Post
+              key={post.id}
+              post={post}
+              refresh={() => this.props.data.refetch()}
+            />
+          ))}
           <Link
             to='/create'
             className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'
@@ -41,17 +48,10 @@ class ListPage extends React.Component {
               alt=''
               className='plus mb3'
             />
-            <div>New Post</div>
+            <div>Report Issue</div>
           </Link>
-          {this.props.data.allPosts.map(post => (
-            <Post
-              key={post.id}
-              post={post}
-              refresh={() => this.props.data.refetch()}
-            />
-          ))}
         </div>
-        {this.props.children}
+
       </div>
     )
   }

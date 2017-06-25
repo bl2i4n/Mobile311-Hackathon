@@ -48,6 +48,12 @@ html {
   font-size: 38px;
 }
 
+.info {
+  flex: 1;
+  padding-left: 40px;
+  font-size: 20;
+}
+
 .new-post {
   background-color: rgba(0,0,0,0.04);
 }

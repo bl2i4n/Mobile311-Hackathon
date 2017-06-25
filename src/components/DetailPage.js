@@ -59,13 +59,13 @@ class DetailPage extends React.Component {
               paddingBottom: '100%',
             }}
           />
-          <div className='flex items-center black-80 fw3 description'>
+          <div className='flex items-center black-80 fw3 info'>
             {Post.title}
           </div>
-          <div className='flex items-center black-80 fw3 description'>
+          <div className='flex items-center black-80 fw3 info'>
             {Post.description}
           </div>
-          <div className='flex items-center black-80 fw3 description'>
+          <div className='flex items-center black-80 fw3 info'>
             {Post.location}
           </div>
         </div>
