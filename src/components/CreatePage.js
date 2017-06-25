@@ -119,8 +119,6 @@ _handleSubmit(e) {
     fetch('https://api.graph.cool/file/v1/cj4bcxjmcbtbm0142hkdals4x', {
       method: 'POST',
       body: data
-    }).then(response => {
-      return response.json()
     }).then(file => {
       this.handlePost(file.id)
     });

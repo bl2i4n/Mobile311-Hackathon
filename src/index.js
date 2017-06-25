@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Greetings from './components/Greetings';
 import NavigationBar from './components/NavigationBar';
 import SignupPage from './components/signup/SignupPage';
+import LoginPage from './components/login/LoginPage';
 import ListPage from './components/ListPage'
 import CreatePage from './components/CreatePage'
 import DetailPage from './components/DetailPage'
@@ -26,6 +27,7 @@ ReactDOM.render(
       <div>
         <Route exact path='/' component={Greetings} />
         <Route path='/signup' component={SignupPage} />
+        <Route path='/login' component={LoginPage} />
         <Route exact path='/main' component={ListPage} />
         <Route path='/create' component={CreatePage} />
         <Route path='/post/:id' component={DetailPage} />
