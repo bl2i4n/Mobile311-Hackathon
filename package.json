@@ -2,6 +2,7 @@
   "name": "mobile311",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://coach-sneeze-53844.netlify.com"
   "dependencies": {
     "apollo-client": "^1.5.0",
     "graphql-tag": "^2.4.2",
