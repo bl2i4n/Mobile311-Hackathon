@@ -89,3 +89,28 @@ html {
 .centered {
   text-align: center;
 }
+
+.h1-main {
+  font-size: 3em;
+  font-family: 'Montserrat', sans-serif;
+  color: #007AFF;
+}
+.h2-main {
+  color: #007AFF;
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+}
+.i-main {
+  font-size: 2em;
+  color: #FF3B30;
+  /*letter-spacing: 1em;*/
+}
+
+.navbar-default {
+    background-color: #157FCC;
+    border-color: #157FCC;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+}
