@@ -81,7 +81,7 @@ class DetailPage extends React.Component {
     await this.props.mutate({variables: {id: this.props.data.Post.id}})
 
     // post is gone, so remove it from history stack
-    this.props.history.replace('/')
+    this.props.history.replace('/main')
   }
 }
 
