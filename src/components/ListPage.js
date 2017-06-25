@@ -17,8 +17,6 @@ class ListPage extends React.Component {
         <div className='flex w-100 h-100 items-center justify-center pt7'>
           <div>
             Loading...
-            //might have to comment out
-            (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})
           </div>
         </div>
       )

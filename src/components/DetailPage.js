@@ -57,7 +57,7 @@ class DetailPage extends React.Component {
           className='w-100 mv3'
           style={{
             paddingTop: '15%',
-            paddingBottom: '50%',
+            paddingBottom: '5%',
           }}
         />
 
