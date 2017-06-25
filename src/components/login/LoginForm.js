@@ -23,7 +23,8 @@ class LoginForm extends React.Component{
     event.preventDefault(event);
     const {email, password} = this.state;
     await this.props.signinUser({variables: { email, password} })
-    window.location.pathname = '/main'
+    this.props.router.push('/main');
+    
   }
 
   render (){

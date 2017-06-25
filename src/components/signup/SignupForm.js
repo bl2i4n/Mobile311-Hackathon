@@ -25,7 +25,7 @@ class SignupForm extends React.Component{
     event.preventDefault(event);
     const {email, password, username, state} = this.state;
     await this.props.createUser({variables: { email, password, username, state } })
-    window.location.pathname = '/main'
+    this.props.router.push('/main');
   }
 
   render (){
