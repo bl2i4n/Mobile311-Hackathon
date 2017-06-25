@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 import Greetings from './components/Greetings';
 import NavigationBar from './components/NavigationBar';
 import SignupPage from './components/signup/SignupPage';
+import ListPage from './components/ListPage'
+import CreatePage from './components/CreatePage'
+import DetailPage from './components/DetailPage'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {ApolloProvider, createNetworkInterface, ApolloClient} from 'react-apollo'
+import 'tachyons'
 import './index.css'
 
 const networkInterface = createNetworkInterface({
@@ -22,6 +26,9 @@ ReactDOM.render(
       <div>
         <Route exact path='/' component={Greetings} />
         <Route path='/signup' component={SignupPage} />
+        <Route exact path='/main' component={ListPage} />
+        <Route path='/create' component={CreatePage} />
+        <Route path='/post/:id' component={DetailPage} />
       </div>
       </div>
     </Router>
