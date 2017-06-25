@@ -50,15 +50,17 @@ class DetailPage extends React.Component {
         <div
           className='bg-white detail flex flex-column no-underline br2 h-100'
         >
-          <div
-            className='image'
-            style={{
-              backgroundImage: `url(${Post.imageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              paddingBottom: '100%',
-            }}
-          />
+
+        <img
+          src={Post.imageUrl}
+          role='presentation'
+          className='w-100 mv3'
+          style={{
+            paddingTop: '15%',
+            paddingBottom: '50%',
+          }}
+        />
+
           <div className='flex items-center black-80 fw3 info'>
             {Post.title}
           </div>

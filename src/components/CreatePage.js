@@ -4,6 +4,8 @@ import { gql, graphql} from 'react-apollo'
 import Modal from 'react-modal'
 import modalStyle from '../constants/modalStyle'
 
+
+
 class CreatePage extends React.Component {
   constructor(props){
   super(props);
@@ -80,11 +82,13 @@ _handleSubmit(e) {
               onChange={e => this.setState({description: e.target.value})} //holds value
             />
 
+
             <div>
               <form onSubmit={this._handleSubmit} className='w-100 pa3 mv2'>
                 <input type="file" onChange={this._handleImageChange} />
                 </form>
-              </div>
+            </div>
+
 
             {this.state.title &&
               this.state.location && this.state.description && this.state.imageUrl &&
